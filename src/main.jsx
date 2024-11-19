@@ -10,8 +10,8 @@ import Register from './components/Student/Register.jsx'
 import SAG from './pages/SAG/SAG.jsx'
 import Footer from './components/Layout/Footer.jsx'
 import Form from './components/Student/form/page.jsx'
+import Dashboard from './components/Student/Dashboard/page.jsx'
 import DocumentVerification from './pages/SAG/DocumentVerification.jsx'
-
 const AppLayout = () => {
   return (
     <div>
@@ -49,6 +49,10 @@ const router = createBrowserRouter([
       {
         path:'student/form',
         element:<Form/>
+      },
+      {
+        path:'student/dashboard/:studid',
+        element:<Dashboard/>
       }
     ]
   }
