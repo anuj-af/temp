@@ -7,6 +7,7 @@ import EducationDetails from './steps/EducationDetails';
 import Attachments from './steps/Attachments';
 import Final from './steps/Final';
 import { StepperContext } from './contexts/StepperContext';
+import Sidebar from '../../Reusable/SideBar';
 
 const Form = () => {
 
@@ -43,29 +44,35 @@ const Form = () => {
         }
     }
   return (
-    <div>
+    <div className=' flex flex-row overflow-x-hidden'>
+
         <div>
-            <Stepper
-                steps={steps}
-                currentStep={currentStep}
-            />
-            <div className=' my-10 p-10'>
-                <StepperContext.Provider value={{
-                    userData,
-                    setUserData,
-                    finalData,
-                    setFinalData
-                }}>
-                    {displaySteps(currentStep)}
-                </StepperContext.Provider>
-            </div>
+            <Sidebar/>
         </div>
-        <div>
-            <StepperControl
-                handleClick={handleClick}
-                currentStep={currentStep}
-                steps={steps}
-            />
+        <div className=' flex flex-col w-full ml-2'>
+            <div>
+                <Stepper
+                    steps={steps}
+                    currentStep={currentStep}
+                />
+                <div className=' my-10 p-10'>
+                    <StepperContext.Provider value={{
+                        userData,
+                        setUserData,
+                        finalData,
+                        setFinalData
+                    }}>
+                        {displaySteps(currentStep)}
+                    </StepperContext.Provider>
+                </div>
+            </div>
+            <div>
+                <StepperControl
+                    handleClick={handleClick}
+                    currentStep={currentStep}
+                    steps={steps}
+                />
+            </div>
         </div>
         
     </div>
