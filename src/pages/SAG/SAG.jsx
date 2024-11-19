@@ -1,6 +1,6 @@
 
-import Sidebar from "../components/Reusable/SideBar";
-import Table from "../components/Reusable/Table";
+import Sidebar from "../../components/Reusable/SideBar";
+import Table from "../../components/Reusable/Table";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 function SAG() {

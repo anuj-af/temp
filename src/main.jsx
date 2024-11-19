@@ -7,9 +7,10 @@ import { createBrowserRouter, Outlet } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import Login from './components/Student/Login.jsx'
 import Register from './components/Student/Register.jsx'
-import SAG from './Pages/Sag.jsx'
+import SAG from './pages/SAG/SAG.jsx'
 import Footer from './components/Layout/Footer.jsx'
 import Form from './components/Student/form/page.jsx'
+import DocumentVerification from './pages/SAG/DocumentVerification.jsx'
 
 const AppLayout = () => {
   return (
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:'sag',
         element:<SAG/>
+      },
+      {
+        path:'sag/documents',
+        element:<DocumentVerification />
       },
       {
         path:'student/form',

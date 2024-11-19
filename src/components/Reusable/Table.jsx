@@ -163,9 +163,9 @@ const Table = () => {
               <td className="py-2 px-4 border-r-2 border-slate-300">{row.courseYear}</td>
               <td className="py-2 px-4 border-r-2 border-slate-300">{row.status}</td>
               <td className="py-2 px-4 text-center">
-                <button className="bg-hblue2 text-white px-4 py-1 rounded-md hover:bg-blue-700">
+                <a className="bg-hblue2 text-white px-4 py-1 rounded-md hover:bg-blue-700" href="/sag/documents">
                   OPEN
-                </button>
+                </a>
               </td>
             </tr>
           ))}
