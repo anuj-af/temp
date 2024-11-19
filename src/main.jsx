@@ -9,6 +9,7 @@ import Login from './components/Student/Login.jsx'
 import Register from './components/Student/Register.jsx'
 import SAG from './Pages/Sag.jsx'
 import Footer from './components/Layout/Footer.jsx'
+import Form from './components/Student/form/page.jsx'
 
 const AppLayout = () => {
   return (
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path:'sag',
         element:<SAG/>
+      },
+      {
+        path:'student/form',
+        element:<Form/>
       }
     ]
   }
