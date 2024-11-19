@@ -34,10 +34,13 @@ const Home = () => {
                     <span className=' font-rubik mt-2 text-xl font-normal'>Student</span>
                 </div>
                 </Link>
+                
+                <Link to={'sag'} >   {/*Login to be included*/}
                 <div className=' w-56 h-32 my-auto bg-hblue2 rounded-xl flex flex-col items-center justify-center text-white font-rubik'>
                     <img src={sag} alt="" className=' w-24 h-16' />
                     <span className=' font-rubik mt-2 text-xl font-normal'>SAG Officer</span>
                 </div>
+                </Link>
                 <div className=' w-56 h-32 my-auto bg-hblue2 rounded-xl flex flex-col items-center justify-center text-white font-rubik'>
                     <img src={finance} alt="" className=' w-10 h-16' />
                     <span className=' font-rubik mt-2 text-xl font-normal'>Finance</span>

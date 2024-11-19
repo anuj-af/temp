@@ -2,11 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Header from './components/Header.jsx'
+import Header from './components/Layout/Header.jsx'
 import { createBrowserRouter, Outlet } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import Login from './components/Student/Login.jsx'
 import Register from './components/Student/Register.jsx'
+import SAG from './Pages/Sag.jsx'
+import Footer from './components/Layout/Footer.jsx'
 
 const AppLayout = () => {
   return (
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
       {
         path:'student/register',
         element:<Register/>
+      },
+      {
+        path:'sag',
+        element:<SAG/>
       }
     ]
   }
@@ -42,5 +48,6 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header/>
     <RouterProvider router={router}/>
+    <Footer/>
   </StrictMode>,
 )
