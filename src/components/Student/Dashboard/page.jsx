@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Sidebar from '../../Reusable/SideBar'
 import { useParams } from 'react-router-dom'
+import Sidebar from '../Sidebar';
 
 const Dashboard = () => {
   const { studid } = useParams();
@@ -14,12 +14,16 @@ const Dashboard = () => {
 
   const studentData=[
     {
+      name:"Saloni Mahajan",
+      email:"salonnimahajan007@gmail.com",
       appId:"2154521213",
       academicyear:"2023-24",
       institute:"IET DAVV Indore",
       status:"locked"
     },
     {
+      name:"Saloni Mahajan",
+      email:"salonnimahajan007@gmail.com",
       appId:"77745554613",
       academicyear:"2022-23",
       institute:"IET DAVV Indore",
@@ -31,7 +35,11 @@ const Dashboard = () => {
   return (
     <div className=' flex font-rubik'>
       <div>
-        <Sidebar />
+        <Sidebar
+        name={studentData[0].name}
+        email={studentData[0].email}
+        studid={studid}
+         />
       </div>
       <div className=' flex flex-col items-center mt-16 w-full text-2xl '>
         <h2 className=' text-center border border-hblue2 p-2 rounded-md bg-hblue2 text-white font-medium px-20'> Dashboard For PMSSS Scholarship</h2>
